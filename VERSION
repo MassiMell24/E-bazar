@@ -1,0 +1,19 @@
+v1.0.0
+2025-12-22
+"e-bazar" - Release 1 (snapshot)
+
+Notes:
+- Core routing and model fixes (router support for ?url, Ad model converted)
+- Added basic authentication: register/login/logout, hashed passwords, CSRF tokens
+- Added Admin seed (scripts/init_db.php creates default admin)
+- Added DB schema improvements for ads (owner_id, description, delivery_modes, sold, created_at)
+- Added pages: create ad (form), store ad, dashboard (myAds), admin dashboard
+- Added safe DB migration in scripts/init_db.php
+- Improved frontend paths (absolute asset paths) and small JS API compatibility
+
+How to reproduce:
+- Run `php scripts/init_db.php` to create admin and migrate DB
+- Start server: `php -S 0.0.0.0:8000 -t .`
+- Visit: http://localhost:8000/e-bazar/
+
+If you prefer, install git and I can create a git tag `v1.0.0` for this release.
